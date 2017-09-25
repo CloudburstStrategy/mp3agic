@@ -3,12 +3,6 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>9</version>
-	</parent>
-
 	<groupId>com.cloudburst</groupId>
 	<artifactId>mp3agic</artifactId>
 	<version>1.0-SNAPSHOT</version>
@@ -60,49 +54,10 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<!-- attach "bundling javadoc jar" to the package phase -->
-			<plugin>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.10.4</version>
-				<executions>
-					<execution>
-						<id>attach-javadoc</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<quiet>true</quiet>
-					<show>private</show>
-					<doctitle><![CDATA[<h1>${project.name}</h1>]]></doctitle>
-					<bottom>
-						<![CDATA[<div align="right"><i>Version ${project.version} - 2006-2015 - <a href="${project.scm.url}" target="_top">${project.scm.url}</a></i></div>]]></bottom>
-				</configuration>
-			</plugin>
-			<!-- attach "bundling source jar" to the package phase -->
-			<plugin>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>3.0.1</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
-			</plugin>
-
-			<!-- code coverage -->
-			<plugin>
-				<groupId>org.eluder.coveralls</groupId>
-				<artifactId>coveralls-maven-plugin</artifactId>
-				<version>4.3.0</version>
 			</plugin>
 
 			<plugin>

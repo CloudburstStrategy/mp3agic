@@ -232,3 +232,8 @@ Thanks for sharing!
 ## Copyright
 
 Copyright (c) 2006-2017 Michael Patricios. See [mit-license.txt](mit-license.txt) for details.
+
+## To Release new version to Bintray
+
+    mvn clean release:prepare -Darguments="-Dmaven.javadoc.skip=true"
+    mvn release:perform -Darguments="-Dmaven.javadoc.skip=true"

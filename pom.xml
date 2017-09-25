@@ -9,14 +9,12 @@
 		<version>9</version>
 	</parent>
 
-	<groupId>com.mpatric</groupId>
+	<groupId>com.cloudburst</groupId>
 	<artifactId>mp3agic</artifactId>
-	<version>0.9.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>mp3agic</name>
-	<description>A java library for reading mp3 files and manipulating mp3 file ID3 tags (ID3v1 and ID3v2.2 to
-		ID3v2.4).
-	</description>
-	<url>https://github.com/mpatric/mp3agic</url>
+	<description>A java library for reading mp3 files</description>
+	<url>https://github.com/CloudburstStrategy/mp3agic</url>
 	<licenses>
 		<license>
 			<name>MIT License</name>
@@ -24,19 +22,6 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-
-	<scm>
-		<developerConnection>scm:git:ssh://git@github.com/mpatric/mp3agic.git</developerConnection>
-		<connection>scm:git:git://github.com/mpatric/mp3agic.git</connection>
-		<tag>HEAD</tag>
-		<url>http://github.com/mpatric/mp3agic</url>
-	</scm>
-
-	<developers>
-		<developer>
-			<name>Michael Patricios</name>
-		</developer>
-	</developers>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -120,17 +105,26 @@
 				<version>4.3.0</version>
 			</plugin>
 
-			<!-- needed by coveralls -->
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>cobertura-maven-plugin</artifactId>
-				<version>2.7</version>
-				<configuration>
-					<format>xml</format>
-					<maxmem>256m</maxmem>
-					<check/>
-				</configuration>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
 			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>bintray-cloudburst-maven</id>
+			<name>cloudburst-maven</name>
+			<url>https://api.bintray.com/maven/cloudburst/maven/com.cloudburst.mp3agic/;publish=1</url>
+		</repository>
+	</distributionManagement>
+
+	<scm>
+		<connection>scm:git:https://github.com/CloudburstStrategy/mp3agic.git</connection>
+		<developerConnection>scm:git:git@github.com:CloudburstStrategy/mp3agic.git</developerConnection>
+		<url>https://github.com/CloudburstStrategy/mp3agic.git</url>
+		<tag>HEAD</tag>
+	</scm>
+
 </project>

@@ -1,8 +1,6 @@
 # mp3agic
-[![Build Status](https://travis-ci.org/mpatric/mp3agic.png?branch=master)](https://travis-ci.org/mpatric/mp3agic)
-[![Coverage Status](https://coveralls.io/repos/mpatric/mp3agic/badge.svg?branch=master)](https://coveralls.io/r/mpatric/mp3agic?branch=master)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.mpatric/mp3agic/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.mpatric/mp3agic)
-[![Build status](https://ci.appveyor.com/api/projects/status/c7k4fnxnjlmr7y7p?svg=true)](https://ci.appveyor.com/project/mpatric/mp3agic)
+
+Forked from https://github.com/mpatric/mp3agic to add support for reading frame data
 
 A java library for reading mp3 files and reading / manipulating the ID3 tags (ID3v1 and ID3v2.2 through ID3v2.4).
 
@@ -211,7 +209,7 @@ mp3file.save("MyMp3File.mp3");
 
 ### Reading and writing ID3v2 frames directly
 
-Frame IDs are defined in the [ID3v2 specification](http://www.id3.org/Developer_Information "ID3v2 specification"). Frames can be read from an ID3v2 tag using these. 
+Frame IDs are defined in the [ID3v2 specification](http://www.id3.org/Developer_Information "ID3v2 specification"). Frames can be read from an ID3v2 tag using these.
 
 For now, the best approach to access frames not yet supported by convenience methods is to extend the `AbstractID3v2Tag` class, following the pattern for other frames already done. Please fork the project on github and submit a pull request if you add anything useful.
 
